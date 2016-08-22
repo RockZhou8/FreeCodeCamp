@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+function confirmEnding(str, target) {
+  // "Never give up and good luck will find you."
+  // -- Falcor
+  
+  var tarnum=target.split("").length;
+  console.log(tarnum);
+  var strnum=str.split("").length;
+  var num=strnum-tarnum;
+  var substr=str.substring(num);
+  if (substr===target) {
+    return true;
+  }else return false;
+  console.log(substr);
+}
+
+confirmEnding("Connor", "n");
+//test
+
+
+
+	</script>
+</body>
+</html>
