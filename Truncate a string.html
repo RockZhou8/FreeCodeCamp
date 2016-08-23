@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+function truncate(str, num) {
+  // Clear out that junk in your trunk
+  var strnew=str;
+  if (num<str.length&&num>3) {
+    var strslice=str.slice(0,num-3);
+    var strnew=strslice+"...";
+  }else if (num<=3) {
+        var strslice=str.slice(0,num);
+            var strnew=strslice+"...";
+  }
+  
+  return strnew;
+}
+
+truncate("A-tisket a-tasket A green and yellow basket", 11);
+
+
+
+
+
+	</script>
+</body>
+</html>

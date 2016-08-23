@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+function chunk(arr, size) {
+  // Break it up.
+
+  var temp = [];
+  var result = [];
+
+  for (var a = 0; a < arr.length; a++) {
+    if (a % size !== size - 1)
+      temp.push(arr[a]);
+    else {
+      temp.push(arr[a]);
+      result.push(temp);
+      temp = [];
+    }
+  }
+
+  if (temp.length !== 0)
+    result.push(temp);
+  return result;
+}
+
+chunk(["a", "b", "c", "d"], 2);
+
+
+
+
+
+
+  </script>
+</body>
+</html>
