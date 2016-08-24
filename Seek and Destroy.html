@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+
+function destroyer(arr) {
+  var args = Array.prototype.slice.call(arguments);
+  console.log(args);
+  args.splice(0, 1);
+    return arr.filter(function(element) {
+    	if(args.indexOf(element) === -1){return true;}
+  });
+}
+
+destroyer([1, 2, 3, 1, 2, 3], 2, 3);
+
+
+
+	</script>
+</body>
+</html>
