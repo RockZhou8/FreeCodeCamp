@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+function falseitem(val) {
+	// body...
+	if(val!==true){return val;}
+}
+function bouncer(arr) {
+  // Don't show a false ID to this bouncer.
+  var filtered=arr.filter(falseitem);
+  return filtered;
+}
+
+
+
+bouncer([1, null, NaN, 1, undefined]);
+
+
+	</script>
+</body>
+</html>

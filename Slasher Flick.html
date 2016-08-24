@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  
+  <script>
+      function slasher(arr, howMany) {
+        // it doesn't always pay to be first
+
+        var newarr= new Array;
+        if (arr.length<howMany){ newarr =arr.slice(arr.length);}else
+          if (howMany<=0) {
+            console.log(arr);
+            newarr=arr.slice(0);}else
+        if (arr.length>howMany) { newarr =arr.slice(howMany-arr.length);}  
+        return newarr;
+      }
+
+      slasher(["burgers", "fries", "shake"], 1);
+
+
+
+
+
+
+
+  </script>
+</body>
+</html>
