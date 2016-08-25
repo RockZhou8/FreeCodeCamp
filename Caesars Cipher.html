@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+
+function rot13(str) { 
+  var strup=str.toUpperCase(); //把所有字母都转成大写
+  var charcodearr=[];
+  var rotcodearr=[];
+  for (var i = 0; i < strup.length; i++) { //获取strup每个字母的code并push进数组charcodearr里
+  	var strcode=(strup.charCodeAt(i));
+  	charcodearr.push(strcode);
+  }
+ for (var j = 0; j < charcodearr.length; j++) { //凯撒加密,加密后的值push进数组rotcodearr里
+	if (charcodearr[j]<65) {rotcodearr.push(charcodearr[j]);}
+		else if (charcodearr[j]<78) {rotcodearr.push(charcodearr[j]+13);}
+		else if (charcodearr[j]<91) {rotcodearr.push(charcodearr[j]-13);}
+		else if(charcodearr[j]>91) {rotcodearr.push(charcodearr[j]);}
+}
+
+
+return String.fromCharCode.apply(this,rotcodearr);//加密后的数组转换成string并返回成字母
+}
+
+// Change the inputs below to test
+rot13("Abc XYz");
+
+
+
+
+
+
+	</script>
+</body>
+</html>
