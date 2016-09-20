@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script>
+
+function sumAll(arr) {
+  var num1=arr[0];
+  var num2=arr[1];
+  var switchnum=0;
+  if (num1>num2) {
+  	switchnum=num1;
+  	num1=num2;
+  	num2=switchnum;} ;
+  var newarr=[];
+  	for (num1; num1 < num2+1; num1++) {
+  		newarr.push(num1);};
+  	var result=newarr.reduce(function(a,b){
+  			return a+b;
+  		});
+  	return result;
+}
+
+sumAll([1, 4]);
+
+
+
+
+
+	</script>
+</body>
+</html>
